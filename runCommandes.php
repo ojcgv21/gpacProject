@@ -1,5 +1,4 @@
-
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -10,14 +9,15 @@
 <body>
 	<div id="main">
 	  <h1>Lcov pour GPAC</h1>
-	  <p>Les resultats sont disponiles dans l'onglet COUVERTURE DU CODE.</p>
-	  <p>Cliquez sur l'onglet <b>COMMANDES A EXECUTER</b> si vous voulez executer des commandes en plus.</p>
+	  <p>Les commandes ont ete executees.</p>
+	  <h2>Cliquez ici pour :</h2>
+	  <a href="runCouverture.php?run=true">Lancer la couverture du code</a>
 	</div>
 <script src="script.js"></script>
 <?php
 if ($_GET['run']) {
   # This code will run if ?run=true is set.
-  exec("/var/www/html/runCouverture.sh");
+  exec("/var/www/html/runCommandes.sh");
 }
 ?>
 </body>
